@@ -6,15 +6,17 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:43:58 by julien            #+#    #+#             */
-/*   Updated: 2024/10/22 12:44:22 by julien           ###   ########.fr       */
+/*   Updated: 2024/10/24 08:26:33 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-t_list	*ft_ftlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
-*/
